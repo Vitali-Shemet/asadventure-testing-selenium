@@ -1,5 +1,6 @@
 package util;
 
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -40,13 +41,17 @@ public class DriverFactory {
 
     public static void closeDriver() {
         if (getDriver() != null) {
-            getDriver().close();
-//            getDriver().quit();
+            getDriver().quit();
         }
     }
 
     @Before
-    public void beforeScenario(){
+    public void beforeScenario() {
         driver = createDriver();
+    }
+
+    @After
+    public void afterScenario() {
+        DriverFactory.closeDriver();
     }
 }
