@@ -4,10 +4,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class HomeLocators {
+public class LeftPanelLocators {
 
     @FindBy(how = How.ID, using = "search")
-    public WebElement searchItems;
+    public WebElement searchInupt;
 
 
 }
