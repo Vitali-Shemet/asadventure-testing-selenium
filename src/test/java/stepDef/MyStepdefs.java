@@ -31,7 +31,8 @@ public class MyStepdefs {
 
     @And("I see specific product {string} on search result")
     public void iSeeSpecificProductOnSearchResult(String productName) {
-        Assert.assertTrue("Search list not contains given product: " + productName, searchResultAction.getProductNamesOfItems().contains(productName));
+        Assert.assertTrue("Search result is not visible",searchResultAction.getProductNamesOfItems().size()>1);
+        Assert.assertTrue("Search result not contains given product: " + productName, searchResultAction.getProductNamesOfItems().contains(productName));
     }
 
     @And("I open item {string}")

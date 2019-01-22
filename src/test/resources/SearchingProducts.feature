@@ -12,4 +12,4 @@ Feature: Searching products
     Examples:
       | item                                    | productName                      |
       | Garmin Sportwatch Fenix 5 Plus Sapphire | Sportwatch Fenix 5 Plus Sapphire |
-      | COLEMAN Tent Oak Canyon 4               | Tent Oak Canyon 4                |
+      | COLEMAN Tent                            | Tent Oak Canyon 4                |

@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ProductDetailsAction {
-    ProductDetails productDetails = new ProductDetails();
+    private ProductDetails productDetails = new ProductDetails();
 
     public String getProductName(){
         return productDetails.getProductName().getText();

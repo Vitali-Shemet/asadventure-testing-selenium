@@ -2,13 +2,14 @@ package actions;
 
 import org.openqa.selenium.WebElement;
 import pages.executors.SearchResult;
+import util.Helpers;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class SearchResultAction {
-    SearchResult searchResult = new SearchResult();
+    private SearchResult searchResult = new SearchResult();
 
     public List<String> getProductNamesOfItems() {
         List<String> itemsList = new ArrayList<>();
@@ -19,7 +20,10 @@ public class SearchResultAction {
     }
 
     public void openSpecificProductNameFromSearchResult(String selectedItem) {
-        List<WebElement> result = searchResult.getProductNamesOfItems().stream().filter(item -> item.getText().equals(selectedItem)).collect(Collectors.toList());
-        result.get(0).click();
+        List<WebElement> result = searchResult.getProductNamesOfItems()
+                .stream()
+                .filter(item -> item.getText().equals(selectedItem))
+                .collect(Collectors.toList());
+        Helpers.scrollTo(result.get(0)).click();
     }
 }
