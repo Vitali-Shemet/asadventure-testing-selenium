@@ -11,7 +11,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import util.DriverFactory;
 
-public class MyStepdefs {
+public class SearchingProducts {
 
     LeftPanelActions homePageAction = new LeftPanelActions();
     SearchResultAction searchResultAction = new SearchResultAction();
