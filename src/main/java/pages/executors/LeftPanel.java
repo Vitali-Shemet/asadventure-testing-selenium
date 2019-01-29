@@ -31,8 +31,9 @@ public class LeftPanel {
         return new AccountMenu();
     }
 
-    public void searchItem(String item) {
+    public SearchResult searchItem(String item) {
         searchInput(item).sendKeys(Keys.ENTER);
+        return new SearchResult();
     }
 
     public AccountMenu openAccountMenu() {

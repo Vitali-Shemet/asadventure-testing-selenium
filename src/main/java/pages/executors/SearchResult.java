@@ -33,11 +33,12 @@ public class SearchResult {
         return itemsList;
     }
 
-    public void openSpecificProductNameFromSearchResult(String selectedItem) {
+    public ProductDetails openSpecificProductNameFromSearchResult(String selectedItem) {
         List<WebElement> result = searchResultLocators.productNamesOnSearchList
                 .stream()
                 .filter(item -> item.getText().equals(selectedItem))
                 .collect(Collectors.toList());
         Helpers.scrollTo(result.get(0)).click();
+        return new ProductDetails();
     }
 }

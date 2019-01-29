@@ -27,8 +27,9 @@ public class Basket {
         return getProductsInBasket().contains(productName);
     }
 
-    public void checkout() {
+    public CheckoutWelcome checkout() {
         basketPageLocators.checkoutBtn.click();
+        return new CheckoutWelcome();
     }
 
     public void remove(String productName) {
